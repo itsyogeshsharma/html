@@ -4,7 +4,21 @@ use Illuminate\Routing\UrlGenerator;
 use Illuminate\Session\Store as Session;
 use Illuminate\Support\Traits\Macroable;
 
-class FormBuilder {
+class FormBuilder {protected $html;
+	/**
+	 * The URL generator instance.
+	 *
+	 * @var \Illuminate\Routing\UrlGenerator  $url
+	 */
+	protected $url;
+	/**
+	 * The CSRF token used by the form builder.
+	 *
+	 * @var string
+	 */
+	protected $csrfToken;
+	/**
+	 * The session store implementation.
 
 	use Macroable;
 
